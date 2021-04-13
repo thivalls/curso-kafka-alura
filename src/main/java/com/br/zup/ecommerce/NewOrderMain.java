@@ -10,7 +10,7 @@ public class NewOrderMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // quero enviar uma mensagem para o kafka
         try (var orderKafkaDispatcher = new OrderDispatcher<Order>()) {
-            try (var emailKafkaDispatcher = new OrderDispatcher<String>()) {
+            try (var emailKafkaDispatcher = new OrderDispatcher<Email>()) {
                 for (var i = 0; i < 10; i++) {
                     var userId = UUID.randomUUID().toString();
                     var orderId = UUID.randomUUID().toString();
@@ -18,7 +18,7 @@ public class NewOrderMain {
                     var order = new Order(userId, orderId, amount);
                     orderKafkaDispatcher.send("ECOMMERCE_NEW_ORDER", userId, order);
 
-                    String email = "my@email.com.br";
+                    Email email = new Email("New order created", "Thanks for your order");
                     emailKafkaDispatcher.send("ECOMMERCE_NEW_ORDER", userId, email);
                 }
             }

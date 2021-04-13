@@ -7,7 +7,12 @@ import java.util.regex.Pattern;
 public class GenericLogService {
     public static void main(String[] args) {
         GenericLogService genericLogService = new GenericLogService();
-        KafkaService kafkaService = new KafkaService(GenericLogService.class.getSimpleName(), Pattern.compile("ECOMMERCE.*"), genericLogService::parse);
+        KafkaService kafkaService = new KafkaService(
+                GenericLogService.class.getSimpleName(),
+                Pattern.compile("ECOMMERCE.*"),
+                genericLogService::parse,
+                String.class
+        );
         kafkaService.run();
     }
 

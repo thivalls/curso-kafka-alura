@@ -5,7 +5,13 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 public class NotifyEmailService {
     public static void main(String[] args) {
         NotifyEmailService emailService = new NotifyEmailService();
-        try (var service = new KafkaService(NotifyEmailService.class.getSimpleName(), "ECOMMERCE_NEW_ORDER_EMAIL", emailService::parse)) {
+        try (var service = new KafkaService(
+                NotifyEmailService.class.getSimpleName(),
+                "ECOMMERCE_NEW_ORDER_EMAIL",
+                emailService::parse,
+                String.class
+        )
+        ) {
             service.run();
         }
     }
