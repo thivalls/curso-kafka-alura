@@ -26,18 +26,18 @@ class KafkaService<T> implements Closeable {
     private Map<String, String> properties;
 
     KafkaService(String group, String topic, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
-        this.kafkaService(group, parse, type, properties);
+        this(group, parse, type, properties);
         consumer.subscribe(Collections.singletonList(topic));
         this.run();
     }
 
     KafkaService(String group, Pattern topic, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
-        this.kafkaService(group, parse, type, properties);
+        this(group, parse, type, properties);
         consumer.subscribe(topic);
         this.run();
     }
 
-    private void kafkaService(String groupId, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
+    private KafkaService(String groupId, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
         this.parse = parse;
         this.type = type;
         this.consumer = new KafkaConsumer<>(getProperties(type, groupId, properties));
@@ -45,9 +45,8 @@ class KafkaService<T> implements Closeable {
 
     void run() {
         while (true) {
-            ConsumerRecords<String, T> records = consumer.poll(Duration.ofMillis(100));
+            var records = consumer.poll(Duration.ofMillis(100));
             if (!records.isEmpty()) {
-                System.out.println("Enviando email");
                 for (var record : records) {
                     parse.consume(record);
                 }

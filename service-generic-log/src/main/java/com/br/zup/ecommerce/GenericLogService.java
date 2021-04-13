@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class GenericLogService {
     public static void main(String[] args) {
-        GenericLogService genericLogService = new GenericLogService();
+        var genericLogService = new GenericLogService();
         var kafkaService = new KafkaService(
                 GenericLogService.class.getSimpleName(),
                 Pattern.compile("ECOMMERCE.*"),

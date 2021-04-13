@@ -9,6 +9,7 @@
         <module name="service-frauddetector" />
         <module name="common-kafka" />
         <module name="service-generic-log" />
+        <module name="service-new-order" />
         <module name="service-email" />
       </profile>
     </annotationProcessing>

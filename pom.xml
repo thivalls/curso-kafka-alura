@@ -13,6 +13,7 @@
         <module>service-frauddetector</module>
         <module>service-generic-log</module>
         <module>common-kafka</module>
+        <module>service-new-order</module>
     </modules>
 
     <dependencies>
