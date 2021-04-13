@@ -2,6 +2,8 @@ package com.br.zup.ecommerce;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
+import java.util.Map;
+
 public class NotifyEmailService {
     public static void main(String[] args) {
         NotifyEmailService emailService = new NotifyEmailService();
@@ -9,7 +11,8 @@ public class NotifyEmailService {
                 NotifyEmailService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER_EMAIL",
                 emailService::parse,
-                String.class
+                String.class,
+                Map.of()
         )
         ) {
             service.run();

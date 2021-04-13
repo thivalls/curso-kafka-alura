@@ -2,6 +2,8 @@ package com.br.zup.ecommerce;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
+import java.util.Map;
+
 public class FraudDetectorService<T> {
     public static void main(String[] args) {
         FraudDetectorService fraudDetectorService = new FraudDetectorService();
@@ -9,7 +11,8 @@ public class FraudDetectorService<T> {
                 FraudDetectorService.class.getSimpleName(),
                 "ECOMMERCE_NEW_ORDER",
                 fraudDetectorService::parse,
-                Order.class
+                Order.class,
+                Map.of()
             )
         ) {
             kafkaService.run();
