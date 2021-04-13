@@ -13,5 +13,15 @@ d
 4src/main/java/com/br/zup/ecommerce/NewOrderMain.java,9\2\921a29330f4242c2ac7bce42174b23ed8f4d84e7
 i
 9src/main/java/com/br/zup/ecommerce/GenericLogService.java,b\5\b5c763395938859eb68b12eaf08fe534a0123e05
-g
-7src/main/java/com/br/zup/ecommerce/KafkaDispatcher.java,8\d\8d3c9038456033a4f8a993eb298ed7b184e73427
+x
+Hsrc/main/java/com/br/zup/ecommerce/kafka/dispatcher/OrderDispatcher.java,3\5\35f02b9a628ca139397af93d8420a22d4c0a274f
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+]
+-src/main/java/com/br/zup/ecommerce/Order.java,a\5\a58c8015a4722010f6d95c245d5f7203ef907394
+]
+-src/main/java/com/br/zup/ecommerce/Email.java,c\5\c5317bf623ffdbdb9b6ff1d5a72cec0d2b74b70f
+w
+Gsrc/main/java/com/br/zup/ecommerce/kafka/serializer/GsonSerializer.java,f\2\f270bb41b26340b615e967c64789b1a76a337c15
+y
+Isrc/main/java/com/br/zup/ecommerce/kafka/serializer/GsonDeserializer.java,e\f\ef553fe61b42a5361aca95c739727d603c092bc7

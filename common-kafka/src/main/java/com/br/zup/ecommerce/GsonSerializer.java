@@ -1,4 +1,4 @@
-package com.br.zup.ecommerce.kafka.serializer;
+package com.br.zup.ecommerce;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

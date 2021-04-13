@@ -1,9 +1,17 @@
 
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ğ‡ó´şÿÿÿÿ8“–óÆŒ/
-T	java:S106"9Replace this use of System.out or System.err by a logger.(Óİ~8“–óÆŒ/
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ÇŸ…ú8“–óÆŒ/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(œ€©Èøÿÿÿÿ8“–óÆŒ/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(±ªàúÿÿÿÿ8“–óÆŒ/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÒöÁİûÿÿÿÿ8“–óÆŒ/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(÷ˆéıÿÿÿÿ8“–óÆŒ/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ÿ‰‡çüÿÿÿÿ8“–óÆŒ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ÿ‰‡çüÿÿÿÿ8“–óÆŒ/
+L
+java:S3740"/Provide the parametrized type for this generic.(×‘¡ª8¦¯ÈáŒ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(÷ˆéıÿÿÿÿ8“–óÆŒ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(±ªàúÿÿÿÿ8“–óÆŒ/
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(œ€©Èøÿÿÿÿ8“–óÆŒ/
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Óİ~8“–óÆŒ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÒöÁİûÿÿÿÿ8“–óÆŒ/
+g
+java:S2095"JUse try-with-resources or close this "KafkaService" in a "finally" clause.(×‘¡ª8ô¤ÙŒ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ğ‡ó´şÿÿÿÿ8“–óÆŒ/
+o
+java:S1128"SRemove this unused import 'com.br.zup.ecommerce.kafka.serializer.GsonDeserializer'.(–í¢_8îÒÒâŒ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÇŸ…ú8“–óÆŒ/
+L
+java:S3740"/Provide the parametrized type for this generic.(×‘¡ª8¾ÔâŒ/

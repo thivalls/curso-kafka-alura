@@ -1,6 +1,5 @@
 package com.br.zup.ecommerce;
 
-import com.br.zup.ecommerce.kafka.serializer.GsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -11,7 +10,7 @@ import java.util.regex.Pattern;
 public class GenericLogService {
     public static void main(String[] args) {
         GenericLogService genericLogService = new GenericLogService();
-        KafkaService kafkaService = new KafkaService(
+        var kafkaService = new KafkaService(
                 GenericLogService.class.getSimpleName(),
                 Pattern.compile("ECOMMERCE.*"),
                 genericLogService::parse,

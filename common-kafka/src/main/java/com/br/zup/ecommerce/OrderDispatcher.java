@@ -1,6 +1,5 @@
-package com.br.zup.ecommerce.kafka.dispatcher;
+package com.br.zup.ecommerce;
 
-import com.br.zup.ecommerce.kafka.serializer.GsonSerializer;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -16,13 +15,12 @@ public class OrderDispatcher<T> implements Closeable {
     private final KafkaProducer producer;
 
     public OrderDispatcher() {
-        this.producer = new KafkaProducer<String, T>(properties());
+        this.producer = new KafkaProducer<String, T>(getProperties());
     }
 
     private static Callback getCallback() {
         return (RecordMetadata success, Exception err) -> {
             if (err != null) {
-                System.out.println("eentrei aqui thiagaoooo ******************");
                 err.printStackTrace();
                 return;
             }
@@ -32,7 +30,7 @@ public class OrderDispatcher<T> implements Closeable {
     }
 
     // CONFIGURANDO KAFKA PARA CRIAR UM PRODUCER
-    private static Properties properties() {
+    private static Properties getProperties() {
         var properties = new Properties();
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
@@ -40,8 +38,8 @@ public class OrderDispatcher<T> implements Closeable {
         return properties;
     }
 
-    public void send(String topic, String key, T order) throws ExecutionException, InterruptedException {
-        ProducerRecord record = new ProducerRecord(topic, key, order);
+    public void send(String topic, String key, T clazz) throws ExecutionException, InterruptedException {
+        ProducerRecord record = new ProducerRecord(topic, key, clazz);
         this.producer.send(record, getCallback()).get();
     }
 

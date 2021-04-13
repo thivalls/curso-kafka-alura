@@ -1,2 +1,18 @@
 
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(âóøêùÿÿÿÿ8ÿüİ¿Œ/
+K
+java:S3740"/Provide the parametrized type for this generic.(ûæ§8£Õ‰ŞŒ/
+`
+java:S1117A">Rename "properties" which hides the field declared at line 27.(Ê£—íşÿÿÿÿ8Ã¤ÌâŒ/
+E
+java:S1068"(Remove this unused "type" private field.(÷ü™¸8Í‚¼âŒ/
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(âóøêùÿÿÿÿ8ÿüİ¿Œ/
+P
+java:S1068".Remove this unused "properties" private field.(êìŠ»øÿÿÿÿ8‹×ÀâŒ/
+p
+java:S1450"SRemove the "type" field and declare it as a local variable in the relevant methods.(÷ü™¸8¢àÔáŒ/
+Q
+java:S3740)"/Provide the parametrized type for this generic.(ˆ¸œ´úÿÿÿÿ8£Õ‰ŞŒ/
+Q
+java:S3740"/Provide the parametrized type for this generic.(âô£óùÿÿÿÿ8£Õ‰ŞŒ/
+Q
+java:S3740#"/Provide the parametrized type for this generic.(–§ùÑÿÿÿÿÿ8£Õ‰ŞŒ/

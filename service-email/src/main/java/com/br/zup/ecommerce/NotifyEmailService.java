@@ -13,8 +13,7 @@ public class NotifyEmailService {
                 emailService::parse,
                 String.class,
                 Map.of()
-        )
-        ) {
+        )) {
             service.run();
         }
     }

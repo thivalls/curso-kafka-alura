@@ -6,7 +6,14 @@
 
     <groupId>com.br.zup</groupId>
     <artifactId>ecommerce</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>service-email</module>
+        <module>service-frauddetector</module>
+        <module>service-generic-log</module>
+        <module>common-kafka</module>
+    </modules>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->

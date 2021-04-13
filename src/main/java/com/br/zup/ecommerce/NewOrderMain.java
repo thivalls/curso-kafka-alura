@@ -1,7 +1,5 @@
 package com.br.zup.ecommerce;
 
-import com.br.zup.ecommerce.kafka.dispatcher.OrderDispatcher;
-
 import java.math.BigDecimal;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;

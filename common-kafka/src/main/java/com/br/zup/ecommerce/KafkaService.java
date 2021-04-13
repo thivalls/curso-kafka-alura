@@ -1,6 +1,5 @@
 package com.br.zup.ecommerce;
 
-import com.br.zup.ecommerce.kafka.serializer.GsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -37,7 +36,7 @@ class KafkaService<T> implements Closeable {
         consumer.subscribe(topic);
         this.run();
     }
-    
+
     private void kafkaService(String groupId, ConsumerFunction parse, Class<T> type, Map<String, String> properties) {
         this.parse = parse;
         this.type = type;
